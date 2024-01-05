@@ -1,4 +1,4 @@
-<!-- test file, copy and paste handlebars withing the body element to open in browser -->
+<!-- test file, copy and paste handlebars within the body element to open in browser -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,40 +10,31 @@
 </head>
 
 <body>
-    <div class="signup-form"> 
-        <h2>Create account</h2>
-      
-        <form>
-          <div class="form-group">
-            <label for="name-signup">Name:</label>
-            <input class="form-input" type="text" id="name-signup" name="name" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="email-signup">Email:</label>
-            <input class="form-input" type="text" id="email-signup" name="email" required />
-          </div>
-      
-          <div class="form-group">
-            <label for="password-signup">Password:</label>
-            <input class="form-input" type="password" id="password-signup" name="password" required />
-          </div>
-      
-          <div class="form-group">
-            <label for="health-goal-signup">Health Goal?</label>
-            <input class="form-input" type="text" id="health-goal-signup" name="health-goal" />
-          </div>
-      
-          <div class="form-group">
-            <label for="current-weight-signup">Current Weight?</label>
-            <input class="form-input" type="number" id="current-weight-signup" name="current-weight" />
-          </div>
-          
-          <div class="form-group">
-            <button class="btn btn-primary" type="submit">Signup</button>
-          </div>
-        </form>
-      </div>
+  <header>
+    <nav>
+        <a href="./layouts/login.handlebars"> Logout</a>
+    </nav>
+ </header>
+ <div>
+    <!-- {{!-- update js syntax with correct name --}} -->
+    <h1>Welcome, {{firstName}} </h1> 
+ </div>
+
+<!-- {{!-- use public/js to take user to respective pages once clicked --}} -->
+ <div>
+    <button type = "submit" class = "tracker-input">Log a Workout</button>
+ </div>
+
+ <div>
+    <button type = "submit" class = "progress-charts">Progress Charts</button>
+ </div>
+
+ <div>
+    <button type = "submit" class = "history">View all Workouts</button>
+ </div>
+
+ <!-- {{!-- js links here, check file loaction--}} -->
+ <script scr="./public/js/dashboard.js"></script>
       
   
 </body>
