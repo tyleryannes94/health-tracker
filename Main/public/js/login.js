@@ -14,8 +14,8 @@ const loginFormHandler = async (event) => {
         });
 
         if (response.ok) {
-        // If successful, redirect the browser to the profile page aka profile.js
-        document.location.replace('/profile'); 
+        // If successful, redirect the browser to the profile page
+        document.location.replace('/profile'); // TODO: change '/profile' to '/profile.js' ?
         } else {
         alert(response.statusText);
         }
@@ -38,13 +38,13 @@ const signupFormHandler = async (event) => {
         // send POST request to API endpoint
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, healthGoal, currentWeight }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        // if successful, redirect browser to profile page aka profile.js
-        document.location.replace('/profile');
+        // if successful, redirect browser to profile page
+        document.location.replace('/profile'); // TODO: change '/profile' to '/profile.js' ?
       } else {
         alert(response.statusText);
       }
