@@ -31,6 +31,8 @@ const signupFormHandler = async (event) => {
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const healthGoal = document.querySelector('#health-goal-signup').value.trim();
+    const currentWeight = document.querySelector('#current-weight-signup').value.trim();
   
     if (name && email && password) {
         // send POST request to API endpoint
@@ -54,5 +56,5 @@ document
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.signup-form') //TODO: write code for signup.handlebars
+  .querySelector('.signup-form') 
   .addEventListener('submit', signupFormHandler);
