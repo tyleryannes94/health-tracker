@@ -5,7 +5,7 @@ const {User, Mood, Workout} = require ('../../models');
 //find a mood by the mood id
 router.get('./:id', (req,res) =>{
     Mood.findByPK(req.params.id, {
-       include:[{model:Workout}] 
+       include:[{model:Workout}, {model:User}] 
     })
     .then ((mood) =>{
         if (!mood){
@@ -23,7 +23,7 @@ router.get('./:id', (req,res) =>{
 //find all moods logged
 router.get('./:id', (req,res) =>{
     Mood.findAll(req.params.id, {
-       include:[{model:Workout}] 
+        include:[{model:Workout}, {model:User}] 
     })
     .then ((mood) =>{
         res.json(mood);
