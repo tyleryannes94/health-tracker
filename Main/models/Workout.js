@@ -3,7 +3,7 @@ const sequelize = require('../config/connection.js');
 
 class User extends Model {}
 
-User.init(
+Workout.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,29 +11,29 @@ User.init(
             primaryKey: true,
             autoIncrement: true
         },
-        first_name: {
+        workout_type: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        last_name: {
-            type: DataTypes.STRING,
+        workout_length: {
+            type: DataTypes.INTEGER,
             allowNull: false
         },
-        email: {
-            type: DataTypes.STRING,
+        mood: {
+            type: DataTypes.INTEGER,
             allowNull: false
         },
-        pass: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        health_goal:{
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        starting_weight: {
+        new_weight: {
             type: DataTypes.INTEGER,
             allowNull: true
+        },
+        user_id:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'User',
+                key: 'id',
+            },
         },
     },
     {
@@ -41,8 +41,8 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'category',
       }
 )
 
-module.exports = User;
+module.exports = Workout;
