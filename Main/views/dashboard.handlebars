@@ -1,0 +1,25 @@
+<header>
+    <nav>
+        <a href="./layouts/login.handlebars"> Logout</a>
+    </nav>
+ </header>
+ <div>
+    {{!-- update js syntax with correct name --}}
+    <h1>Welcome, {{firstName}} </h1> 
+ </div>
+
+{{!-- use public/js to take user to respective pages once clicked --}}
+ <div>
+    <button type = "submit" class = "tracker-input">Log a Workout</button>
+ </div>
+
+ <div>
+    <button type = "submit" class = "progress-charts">Progress Charts</button>
+ </div>
+
+ <div>
+    <button type = "submit" class = "history">View all Workouts</button>
+ </div>
+
+ {{!-- js links here, check file loaction--}}
+ <script scr="./public/js/dashboard.js"></script>
