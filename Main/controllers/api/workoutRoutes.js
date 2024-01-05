@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {User, Workout, Mood} = require ('../../models');
+const withAuth = require('../../utils/auth'); 
 
 //find a workout by the workout id
 router.get('./:id', (req,res) =>{
@@ -34,7 +35,7 @@ router.get('./:id', (req,res) =>{
 });
 
 //create a new workout log
-router.post ('/',(req,res) =>{
+router.post ('/',withAuth,(req,res) =>{
     Workout.create({
         workout_name:req.body.workout //may need to update this line!
     })
@@ -48,7 +49,7 @@ router.post ('/',(req,res) =>{
 });
 
 //delete a workout
-router.delete('/',(req,res)=> {
+router.delete('/:id',withAuth,(req,res)=> {
     Workout.destroy ({
         where: {
             id:req.params.id

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {User, Mood, Workout} = require ('../../models');
+const withAuth = require('../../utils/auth');
 
 
 //find a mood by the mood id
@@ -35,7 +36,7 @@ router.get('./:id', (req,res) =>{
 });
 
 //create a new mood log
-router.post ('/',(req,res) =>{
+router.post ('/',withAuth,(req,res) =>{
     Mood.create({
         mood_name:req.body.mood_name
     })
@@ -49,7 +50,7 @@ router.post ('/',(req,res) =>{
 });
 
 //delete a mood
-router.delete('/',(req,res)=> {
+router.delete('/:id',withAuth,(req,res)=> {
     Mood.destroy ({
         where: {
             id:req.params.id
