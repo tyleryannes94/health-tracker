@@ -5,6 +5,8 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+require('dotenv').config();
+
 
 // sequelize connection
 const sequelize = require('./config/connection');
@@ -21,7 +23,7 @@ app.use(routes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 const sess = {
-  secret: 'Super secret secret', // Need to set this up from the .env file!
+  secret: process.env.SESSION_SECRET, // Using secret from .env file
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -40,7 +42,7 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening at http://localhost:${PORT}!`));
 });
 
-// start server
-app.listen(PORT, () => {
-    console.log(`App listening at http://localhost:${PORT}!`);
-  });
+// start server (commenting this out because the code above handles this)
+// app.listen(PORT, () => {
+//     console.log(`App listening at http://localhost:${PORT}!`);
+//   });

@@ -35,18 +35,24 @@ router.get('./:id', (req,res) =>{
     });
 });
 
-//create a new mood log
-router.post ('/',withAuth,(req,res) =>{
-    Mood.create({
-        mood_name:req.body.mood_name
-    })
-    .then((newMood) => {
-        res.json(newMood);
-    })
-    .catch((err) => {
-        console.error(err);
-        res.status(400).json(err);
-    })
+// Create a new mood log
+router.post('/', withAuth, (req, res) => {
+    // Assuming mood_name is the correct field and it's expected to be in the request body
+    const { mood_name } = req.body;
+
+    // Check if mood_name is provided
+    if (!mood_name) {
+        return res.status(400).json({ message: 'Mood name is required' });
+    }
+
+    Mood.create({ mood_name })
+        .then(newMood => {
+            res.status(201).json(newMood);
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json({ message: 'Error creating new mood log', error: err.message });
+        });
 });
 
 //delete a mood
