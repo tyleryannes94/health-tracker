@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 
 //find a mood by the mood id
-router.get('./:id', (req,res) =>{
+router.get('/:id', (req,res) =>{
     Mood.findByPK(req.params.id, {
        include:[{model:Workout}, {model:User}] 
     })
@@ -22,7 +22,7 @@ router.get('./:id', (req,res) =>{
 });
 
 //find all moods logged
-router.get('./:id', (req,res) =>{
+router.get('/:id', (req,res) =>{
     Mood.findAll(req.params.id, {
         include:[{model:Workout}, {model:User}] 
     })
@@ -36,7 +36,7 @@ router.get('./:id', (req,res) =>{
 });
 
 //create a new mood log
-router.post ('/',withAuth,(req,res) =>{
+router.post ('/', withAuth, (req,res) =>{
     Mood.create({
         mood_name:req.body.mood_name
     })
