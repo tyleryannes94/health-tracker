@@ -21,7 +21,7 @@ app.use(routes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 const sess = {
-  secret: 'Super secret secret', // Need to set this up from the .env file!
+  secret: 'secret_password',
   cookie: {},
   resave: false,
   saveUninitialized: true,
