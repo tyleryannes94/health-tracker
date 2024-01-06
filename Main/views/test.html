@@ -1,41 +1,56 @@
-<!-- test file, copy and paste handlebars within the body element to open in browser -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resolute</title>
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/jass.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-lvf9GUg9f5r1d01e3a8G3RtLjh1HUm1cFj2C73xfA/iSBE5d4pZS7PVAzA1VXPO" crossorigin="anonymous">
+
 </head>
 
-<body>
-  <header>
-    <nav>
-        <a href="./layouts/login.handlebars"> Logout</a>
-    </nav>
- </header>
- <div>
-    <!-- {{!-- update js syntax with correct name --}} -->
-    <h1>Welcome, {{firstName}} </h1> 
- </div>
+<body id="login-page-body">
+    <div>
+        <header>
+            <h1 id="login-header">Welcome to Resolute, ready to get healthy?</h1>
+        </header>
+        <h2>Login</h2> 
+        <form class="login-form column is-two-fifths is-justify-content-center">
+         <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="Email" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="password" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+            <div class="field">
+               <p class="control">
+                 <button class="button is-success">
+                   Login
+                 </button>
+               </p>
+             </div>
+        </form>
 
-<!-- {{!-- use public/js to take user to respective pages once clicked --}} -->
- <div>
-    <button type = "submit" class = "tracker-input">Log a Workout</button>
- </div>
-
- <div>
-    <button type = "submit" class = "progress-charts">Progress Charts</button>
- </div>
-
- <div>
-    <button type = "submit" class = "history">View all Workouts</button>
- </div>
-
- <!-- {{!-- js links here, check file loaction--}} -->
- <script scr="./public/js/dashboard.js"></script>
-      
-  
+        <p>
+            Don't have an account? <a href="../signup.handlebars">Sign up here</a>.
+        </p>
+    </div>
+    <!-- {{!-- js links here --}} -->
 </body>
 </html>
+
