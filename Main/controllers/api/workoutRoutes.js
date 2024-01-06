@@ -21,7 +21,7 @@ router.get('./:id', (req,res) =>{
 });
 
 //find all workouts logged
-router.get('./:id', (req,res) =>{
+router.get('/:id', (req,res) =>{
     Workout.findAll(req.params.id, {
         include:[{model:Mood}, {model:User}] 
     })

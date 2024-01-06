@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../public/css/jass.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-lvf9GUg9f5r1d01e3a8G3RtLjh1HUm1cFj2C73xfA/iSBE5d4pZS7PVAzA1VXPO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="YOUR_CORRECT_INTEGRITY_VALUE" crossorigin="anonymous">
+
 
 </head>
 
@@ -17,40 +18,36 @@
         <header>
             <h1 id="login-header">Welcome to Resolute, ready to get healthy?</h1>
         </header>
-        <h2>Login</h2> 
-        <form class="login-form column is-two-fifths is-justify-content-center">
-         <div class="field">
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="email" placeholder="Email" required>
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </p>
-          </div>
-          <div class="field">
-            <p class="control has-icons-left">
-              <input class="input" type="password" placeholder="Password">
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </p>
-            <div class="field">
-               <p class="control">
-                 <button class="button is-success">
-                   Login
-                 </button>
+      <div class="login-form column is-one-third">
+        <p class="login-text">Login</p> 
+         <form>
+            <div class="field ">
+               <p class="control has-icons-left">
+               <input class="input" type="email" placeholder="Email" required>
+               <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+               </span>
                </p>
-             </div>
-        </form>
-
-        <p>
-            Don't have an account? <a href="../signup.handlebars">Sign up here</a>.
+            </div>
+            <div class="field">
+               <p class="control has-icons-left">
+               <input class="input" type="password" placeholder="Password" required>
+               <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+               </span>
+               </p>
+               <div class="field control">
+                  <button class="login-btn button is-success">Login</button>
+               </div>
+         </form>
+         <p class="login-text">
+            Don't have an account? <a href="../signup.handlebars">Sign up here</a>
         </p>
+      </div>
+
+        
     </div>
-   {{!--  js links here  --}}
+   {{!-- js links here --}}
 </body>
 </html>
 
