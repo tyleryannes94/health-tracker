@@ -1,0 +1,20 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#login-page-body {
+    background-image: url(../images/shutterstock_1134937067.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+#login-header {
+    font-family: 'Bebas Neue', serif;
+    font-size: 80px;
+    color: black;
+
+}
