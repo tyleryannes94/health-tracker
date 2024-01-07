@@ -36,7 +36,10 @@ app.use(session(sess));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Handlebars setup
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ 
+  helpers,
+  defaultLayout: false // This line ignores the /layouts folder since we don't have a main.handlebars file
+});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
