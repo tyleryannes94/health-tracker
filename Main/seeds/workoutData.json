@@ -1,0 +1,22 @@
+[
+    {
+        "workout_type": "Cardio",
+        "duration": 30,
+        "user_id": 1
+    },
+    {
+        "workout_type": "Strength Training",
+        "duration": 45,
+        "user_id": 1
+    },
+    {
+        "workout_type": "Yoga",
+        "duration": 60,
+        "user_id": 2
+    },
+    {
+        "workout_type": "HIIT",
+        "duration": 20,
+        "user_id": 2
+    }
+]
