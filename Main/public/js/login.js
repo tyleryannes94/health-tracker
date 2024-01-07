@@ -10,20 +10,19 @@ const loginFormHandler = async (event) => {
         const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },// not sure if needed
+        headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/profile'); // TODO: change '/profile' to '/profile.js' ?
+        document.location.replace('/profile'); 
         } else {
         alert(response.statusText);
         }
     }
     };
 
-//TODO: update signupFormHandler function
-//the following is a stand-in function based off mod 14 mini project
+
 const signupFormHandler = async (event) => {
     event.preventDefault(); 
   
