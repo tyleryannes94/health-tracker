@@ -1,9 +1,15 @@
+/* for all .handlebars */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+.field.control {
+    display: flex;
+    justify-content: center;
+}
 
+/* start styling for login.handlebars */
 #login-page-body {
     background-image: url(../images/shutterstock_1134937067.jpg);
     background-size: cover;
@@ -35,20 +41,36 @@ html, body {
     margin-top: 10px;
 }
 
-
-
-.field.control {
-    display: flex;
-    justify-content: center;
-}
-
-.login-text{
+.login-text {
     color: black;
     font-size: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.signup-form {
-    
+
+/* start styling for signup.handlebars */
+.signup-form-body {
+    background: linear-gradient(rgb(40, 149, 238),rgb(3, 202, 202),rgb(140, 253, 248))
 }
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 5px auto; 
+}
+
+.signup-text {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.submit-cancel-btns {
+    margin-top: 30px;
+}
+
+
