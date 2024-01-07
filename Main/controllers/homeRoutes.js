@@ -21,7 +21,7 @@ router.get('/login', (req, res) => {
 });
 
 // Route to render the registration page
-router.get('/register', (req, res) => {
+router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/dashboard');
         return;
