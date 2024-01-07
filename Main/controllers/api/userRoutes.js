@@ -1,13 +1,11 @@
 const router = require('express').Router();
-const {User, Mood, Workout} = require ('../../models');
+const { User, Mood, Workout } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Route for user registration
 router.post('/signup', async (req, res) => {
     try {
-        const newUser = await User.create({
-            ...req.body
-        });
+        const newUser = await User.create(req.body);
 
         req.session.save(() => {
             req.session.user_id = newUser.id;
@@ -59,11 +57,12 @@ router.post('/logout', (req, res) => {
     }
 });
 
+// Route for user profile data
 router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ['password'] }, // Exclude password from the data sent back
-            include: [{ model: Mood }, { model: Workout }] // Example: include related moods and workouts
+            attributes: { exclude: ['password'] },
+            include: [{ model: Mood }, { model: Workout }]
         });
 
         if (!userData) {
