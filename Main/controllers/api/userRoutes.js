@@ -3,7 +3,7 @@ const {User, Mood, Workout} = require ('../../models');
 const withAuth = require('../../utils/auth');
 
 // Route for user registration
-router.post('/register', async (req, res) => {
+router.post('/signup', async (req, res) => {
     try {
         const newUser = await User.create({
             ...req.body
