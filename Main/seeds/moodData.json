@@ -1,0 +1,26 @@
+[
+    {
+        "mood_type": "Happy",
+        "user_id": 1
+    },
+    {
+        "mood_type": "Neutral",
+        "user_id": 1
+    },
+    {
+        "mood_type": "Tired",
+        "user_id": 1
+    },
+    {
+        "mood_type": "Happy",
+        "user_id": 2
+    },
+    {
+        "mood_type": "Neutral",
+        "user_id": 2
+    },
+    {
+        "mood_type": "Tired",
+        "user_id": 2
+    }
+]
