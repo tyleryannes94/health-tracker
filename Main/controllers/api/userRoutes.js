@@ -59,4 +59,22 @@ router.post('/logout', (req, res) => {
     }
 });
 
+router.get('/profile', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] }, // Exclude password from the data sent back
+            include: [{ model: Mood }, { model: Workout }] // Example: include related moods and workouts
+        });
+
+        if (!userData) {
+            res.status(404).json({ message: 'User not found' });
+            return;
+        }
+
+        res.json(userData.get({ plain: true }));
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
