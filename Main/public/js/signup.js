@@ -25,7 +25,7 @@ const signupFormHandler = async (event) => {
   
       if (response.ok) {
         // if successful, redirect browser to profile page
-        document.location.replace('/profile'); // TODO: change '/profile' to '/profile.js' ?
+        document.location.replace('/api/dashboard'); // TODO: change '/profile' to '/profile.js' ?
       } else {      
         console.log(await response.json());
         alert(response.statusText);

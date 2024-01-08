@@ -61,7 +61,7 @@ router.post('/logout', (req, res) => {
 });
 
 // Route for user profile data
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
