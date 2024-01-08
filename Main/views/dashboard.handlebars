@@ -1,25 +1,38 @@
-<header>
-    <nav>
-        <a href="./layouts/login.handlebars"> Logout</a>
+<body class="dashboard-page">
+ 
+  <div class="hero-head">
+    <nav class="navebar">
+      <div class="container" >
+        <div class="navbar-brand">
+          <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
+          <div class="navbar-item navbar-end">
+            <a class="button is-link"> Logout</a>
+          </div>
+        </div>
+      </div>
     </nav>
- </header>
- <div>
-    {{!-- update js syntax with correct name --}}
-    <h1>Welcome, {{firstName}} </h1> 
- </div>
+  </div>
+  
+  
+  <div class="dashboard-btn">
+  <div class="workout-input">
+    <button type = "submit" class ="workout-input-btn">
+      <span class="btn-text">Log a Workout</span>
+    </button>
+  </div>
 
-{{!-- use public/js to take user to respective pages once clicked --}}
- <div>
-    <button type = "submit" class = "tracker-input">Log a Workout</button>
- </div>
+  <div class="progress-graphs">
+    <button type = "submit" class ="progress-btn">
+      <span class="btn-text">View Progress</span>
+    </button>
+  </div>
 
- <div>
-    <button type = "submit" class = "progress-charts">View Progress</button>
- </div>
+  <div class="history">
+    <button type = "submit" class ="history-btn">
+      <span class="btn-text">View History</span></button>
+  </div>
+</div>
 
- <div>
-    <button type = "submit" class = "history">View History</button>
- </div>
+<script scr="./public/js/dashboard.js"></script>
 
- {{!-- js links here, check file loaction--}}
- <script scr="./public/js/dashboard.js"></script>
+</body>
