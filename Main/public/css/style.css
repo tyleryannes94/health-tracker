@@ -169,3 +169,30 @@ html, body {
     opacity: 0.6;
     pointer-events: none;   
 }
+
+/* start styling for tracker-input.handlebars */
+.tracker-header {
+    color: black;
+    font-size: 60px;
+    font-family: 'Bebas Neue', serif;
+}
+
+.tracker-input-page {
+    background-color: rgba(223, 250, 252, 0.945);
+}
+
+.tracker-text {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.tracker-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 5px auto; 
+}
