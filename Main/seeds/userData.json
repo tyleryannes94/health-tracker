@@ -1,0 +1,18 @@
+[
+    {
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john@example.com",
+        "password": "password123",
+        "health_goal": "Lose weight",
+        "starting_weight": 180
+    },
+    {
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "email": "jane@example.com",
+        "password": "password123",
+        "health_goal": "Gain muscle",
+        "starting_weight": 140
+    }
+]
