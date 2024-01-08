@@ -11,16 +11,23 @@ const signupFormHandler = async (event) => {
   
     if (firstName && lastName && email && password) {
         // send POST request to API endpoint
-      const response = await fetch('/api/signup', {
+      const response = await fetch('/api/user/signup', {
         method: 'POST',
-        body: JSON.stringify({ firstName, lastName, email, password, healthGoal, currentWeight }),
+        body: JSON.stringify({ 
+            "first_name": firstName, 
+            "last_name": lastName, 
+            "email": email, 
+            "pass": password, 
+            "health_goal": healthGoal, 
+            "starting_weight": currentWeight }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         // if successful, redirect browser to profile page
         document.location.replace('/profile'); // TODO: change '/profile' to '/profile.js' ?
-      } else {
+      } else {      
+        console.log(await response.json());
         alert(response.statusText);
       }
     }
