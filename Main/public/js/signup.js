@@ -2,17 +2,18 @@ const signupFormHandler = async (event) => {
     event.preventDefault(); 
   
     // collect info from sign up form
-    const name = document.querySelector('#name-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-    const healthGoal = document.querySelector('#health-goal-signup').value.trim();
-    const currentWeight = document.querySelector('#current-weight-signup').value.trim();
+    const firstName = document.querySelector('#first-name').value.trim();
+    const lastName = document.querySelector('#last-name').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value.trim();
+    const healthGoal = document.querySelector('#goal').value.trim();
+    const currentWeight = document.querySelector('#weight').value.trim();
   
-    if (name && email && password) {
+    if (firstName && lastName && email && password) {
         // send POST request to API endpoint
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password, healthGoal, currentWeight }),
+        body: JSON.stringify({ firstName, lastName, email, password, healthGoal, currentWeight }),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -23,7 +24,7 @@ const signupFormHandler = async (event) => {
         alert(response.statusText);
       }
     }
-  };
+};
 
 document
   .querySelector('.signup-form') 
