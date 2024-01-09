@@ -9,7 +9,7 @@ USE resolution_tracking;
 --     first_name VARCHAR(255) NOT NULL,
 --     last_name VARCHAR(255) NOT NULL,
 --     email VARCHAR(255) NOT NULL,
---     pass VARCHAR(255) NOT NULL,
+--     password VARCHAR(255) NOT NULL,
 --     health_goal VARCHAR(255) NOT NULL,
 --     starting_weight INT NOT NULL
 -- );

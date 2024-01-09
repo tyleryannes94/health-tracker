@@ -5,7 +5,6 @@ const withAuth = require('../../utils/auth');
 // Route for user registration
 router.post('/signup', async (req, res) => {
     try {
-        console.log(req.body.pass)
         const newUser = await User.create(req.body);
 
         req.session.save(() => {
@@ -15,8 +14,6 @@ router.post('/signup', async (req, res) => {
             res.status(200).json(newUser);
         });
     } catch (err) {
-        console.log("some err")
-        console.log(err)
         res.status(400).json(err);
     }
 });

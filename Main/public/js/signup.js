@@ -7,7 +7,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password').value.trim();
   const healthGoal = document.querySelector('#goal').value.trim();
   const currentWeight = document.querySelector('#weight').value.trim();
-console.log(password)
+
   if (firstName && lastName && email && password) {
       const response = await fetch('/api/users/signup', {
           method: 'POST',
