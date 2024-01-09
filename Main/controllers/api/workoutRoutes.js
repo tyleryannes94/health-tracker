@@ -35,17 +35,21 @@ router.get('/:id', (req,res) =>{
 });
 
 //create a new workout log
-router.post ('/',withAuth,(req,res) =>{
-    Workout.create({
-        workout_name:req.body.workout //may need to update this line!
-    })
-    .then((newWorkout) => {
+router.post('/tracker-input', withAuth, async (req, res) => {
+    const { workout_type, workout_length, mood, new_weight } = req.body;
+    try {
+        const newWorkout = await Workout.create({
+            workout_type,
+            workout_length,
+            mood,
+            new_weight,
+            user_id: req.session.user_id // Assuming this comes from the session
+        });
         res.json(newWorkout);
-    })
-    .catch((err) => {
+    } catch (err) {
         console.error(err);
         res.status(400).json(err);
-    })
+    }
 });
 
 //delete a workout
