@@ -1,11 +1,12 @@
 // create callback fx for workout button
-const workoutButtonHandler = async (event) => {
-    if (event.target.classList.contains('workout-input-btn')) {
-        // redirect user to tracker-input.js page
-        // window.location.assign('../views/tracker-input.handlebars');
-        ('/controllers/tracker-input')
-    }
-};
+
+// const workoutButtonHandler = async (event) => {
+//     if (event.target.classList.contains('workout-input-btn')) {
+//         // redirect user to tracker-input.js page
+//         // window.location.assign('../views/tracker-input.handlebars');
+//         ('/controllers/tracker-input')
+//     }
+// };
 
 // // create callback fx for progress button
 // const progressButtonHandler = async (event) => {
@@ -30,9 +31,9 @@ const workoutButtonHandler = async (event) => {
 // };
 
 
-document 
-  .querySelector('.workout-input-btn')
-  .addEventListener('click', workoutButtonHandler);
+// document 
+//   .querySelector('.workout-input-btn')
+//   .addEventListener('click', workoutButtonHandler);
 
 // document
 //   .querySelector('.progress-btn')
