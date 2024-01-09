@@ -4,7 +4,7 @@ const userRoutes = require('./userRoutes');
 const workoutRoutes = require('./workoutRoutes');
 
 router.use ('/mood',moodRoutes);
-router.use ('/user',userRoutes);
+router.use ('/users',userRoutes);
 router.use ('/workout',workoutRoutes);
 
 module.exports = router;
