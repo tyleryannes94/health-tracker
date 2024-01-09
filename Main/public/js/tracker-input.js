@@ -1,43 +1,46 @@
 const workoutFormHandler = async (event) => {
     event.preventDefault();
 
-    // Capture the input values from your form
     const workoutType = document.querySelector('#workout-type').value;
-    const workoutTime = document.querySelector('input[type="number"]').value; // Assuming this is the workout time input
+    const workoutTime = document.querySelector('#workout-time').value;
     const mood = document.querySelector('input[name="mood"]:checked').value;
-    const currentWeight = document.querySelector('input[type="text"]').value; // Assuming this is the current weight input
+    let currentWeight = document.querySelector('#current-weight').value;
 
-    // Check if necessary fields are filled
-    if (workoutType && workoutTime && mood) {
-        try {
-            const response = await fetch('/api/workout', { // Replace with your API endpoint
-                method: 'POST',
-                body: JSON.stringify({
-                    workoutType,
-                    workoutTime,
-                    mood,
-                    currentWeight // This could be optional depending on your design
-                }),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
+    // Convert currentWeight to an integer if it's provided
+    if (currentWeight) {
+        currentWeight = parseInt(currentWeight);
+    }
 
-            if (response.ok) {
-                alert('Workout and mood logged successfully!');
-                // Redirect or update the page as needed
-                // document.location.replace('/some-page');
-            } else {
-                alert('Failed to log workout. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
+    // Prepare the data object with required fields
+    let workoutData = {
+        workout_type: workoutType,
+        workout_length: workoutTime,
+        mood: mood
+    };
+
+    // Include currentWeight only if it's provided and valid
+    if (!isNaN(currentWeight)) {
+        workoutData.new_weight = currentWeight;
+    }
+
+    try {
+        const response = await fetch('/api/workout/tracker-input', {
+            method: 'POST',
+            body: JSON.stringify(workoutData),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.ok) {
+            alert('Workout and mood logged successfully!');
+            document.location.replace('/dashboard');
+        } else {
+            alert('Failed to log workout. Please try again.');
         }
-    } else {
-        alert('Please fill in all required fields.');
+    } catch (error) {
+        console.error('Error:', error);
     }
 };
 
-document
-    .querySelector('.tracker-form') // Replace with your form's class
-    .addEventListener('submit', workoutFormHandler);
+document.querySelector('.tracker-form').addEventListener('submit', workoutFormHandler);

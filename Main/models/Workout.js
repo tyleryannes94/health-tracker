@@ -27,7 +27,7 @@ Workout.init(
             type: DataTypes.INTEGER,
             allowNull: true
         },
-        user_id:{
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -35,14 +35,19 @@ Workout.init(
                 key: 'id',
             },
         },
+        logged_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW // Sets the default value to the current date and time
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'category',
-      }
+        modelName: 'workout', // Ensure this is correctly named
+    }
 )
 
 module.exports = Workout;
