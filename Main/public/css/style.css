@@ -4,10 +4,16 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+body {
+    min-height: 100vh;
+}
+
 .field.control {
     display: flex;
     justify-content: center;
 }
+
 
 /* start styling for login.handlebars */
 #login-page-body {
@@ -74,15 +80,18 @@ html, body {
 }
 
 /* start styling for dashboard.handlebars */
-
 .dashboard-header {
     color: black;
     font-size: 60px;
     font-family: 'Bebas Neue', serif;
 }
 
-.dashboard-page {
+body.dashboard-page {
     background-color: rgba(223, 250, 252, 0.945);
+}
+
+.navbar {
+    background-color: rgba(223, 250, 252, 0.945) ;
 }
 
 .btn-text {
@@ -171,14 +180,14 @@ html, body {
 }
 
 /* start styling for tracker-input.handlebars */
+.tracker-input-page {
+    background-color: rgba(223, 250, 252, 0.945);
+}
+
 .tracker-header {
     color: black;
     font-size: 60px;
     font-family: 'Bebas Neue', serif;
-}
-
-.tracker-input-page {
-    background-color: rgba(223, 250, 252, 0.945);
 }
 
 .tracker-text {
@@ -196,3 +205,50 @@ html, body {
     height: 100vh;
     margin: 5px auto; 
 }
+
+/* start styling for data-graph.handlebars */
+.progress-page {
+    background-color: rgba(223, 250, 252, 0.945);
+    flex: 1;
+}
+
+.progress-header {
+    color: black;
+    font-size: 60px;
+    font-family: 'Bebas Neue', serif;
+}
+
+.progress-text-1 {
+    color: black;
+    font-size: 50px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    font-family: 'Bebas Neue', serif;
+}
+
+.progress-text-2 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    /* change height if necessary */
+}
+
+.charts canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.data-charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+

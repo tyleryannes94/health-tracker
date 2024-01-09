@@ -1,23 +1,39 @@
- <header>
+<body class="progress-page">
+  <header>
     <nav>
-        <a href="./dashboard.handlebars">Dashboard</a>
-        <a href="./tracker-input.handlebars">Log a Workout</a>
-        <a href="./history.handlebars">View History</a>
-        <a href="./layouts/login.handlebars"> Logout</a>
+      <div class="navbar-brand">
+        <p class="navbar-item progress-header">Progress</p>
+          
+        <div class="navbar-item navbar-end buttons">
+            <a class="button is-link" >Dashboard</a>
+            <a class="button is-link" >Log a Workout</a>
+            <a class="button is-link">View History</a>
+            <a class="button is-link"> Logout</a>
+        </div>
+      </div>
     </nav>
- </header>
- <div>
-    {{!-- check js syntax, correct name? --}}
-    <h1>Keep up the good work, {{firstName}}!</h1>
- </div>
+ </header> 
 
- {{!-- not sure how the charts will be display --}}
- <div>
-    {{!-- line chart: date v. workout length --}}
- </div>
+   <div>
+      <p class="progress-text-1">Keep up the good work, {{firstName}}!</p>
+   
+      <div class="data-charts">
+         <div>
+            <p class="progress-text-2">Look at your workout consistency</p>
+            <div class="charts">
+            {{dateVSlength}}
+            </div>
+         </div>
+         
+         <div>
+            <p class="progress-text-2">Look at your mood</p>
+            <div class="charts">
+            {{moodsPercentage}}
+            </div>
+         </div>
 
- <div>
-    {{!-- pie graph: moods% per month --}}
- </div>
 
-  {{!-- js links here --}}
+      </div>
+   </div>
+  <script scr="js/data-graph.js"></script>
+</body>
