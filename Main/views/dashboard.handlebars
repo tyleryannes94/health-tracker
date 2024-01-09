@@ -21,7 +21,7 @@
         <div class="navbar-brand">
           <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p> {{!-- does not display firstName --}}
           <div class="navbar-item navbar-end">
-            <a class="button is-link"> Logout</a>
+            <a href="/Main/public/js/logout.js" class="button is-link"> Logout</a> {{! not sure if this would work}}
           </div>
         </div>
       </div>
@@ -36,14 +36,11 @@
   </div>
 
   <div class="progress-graphs">
-    <button type = "submit" class ="progress-btn">
-      <span class="btn-text">View Progress</span>
-    </button>
+    <a href="/data-graph" class="progress-btn"><span class="btn-text">View Progress</span></a>
   </div>
 
   <div class="history">
-    <button type = "submit" class ="history-btn">
-      <span class="btn-text">View History</span></button>
+    <a href="/history" class ="history-btn"><span class="btn-text">View History</span></a>
   </div>
 </div>
 
