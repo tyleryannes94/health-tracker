@@ -2,8 +2,8 @@ const loginFormHandler = async (event) => {
     event.preventDefault(); // prevents the default form submission behavior
 
     // collect info from login form 
-    const email = document.querySelector('#email').ariaValueMax.trim();
-    const password = document.querySelector('#password');
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value;
 
     if (email && password) {
         // Send a POST request to the API endpoint

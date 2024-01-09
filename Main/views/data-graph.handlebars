@@ -1,23 +1,53 @@
- <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolute</title>
+    <link rel="stylesheet" href="css/style.css">
+    {{!-- <link rel="stylesheet" href="css/jass.css"> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="YOUR_CORRECT_INTEGRITY_VALUE" crossorigin="anonymous">
+
+
+</head>
+<body class="progress-page">
+  <header>
     <nav>
-        <a href="./dashboard.handlebars">Dashboard</a>
-        <a href="./tracker-input.handlebars">Log a Workout</a>
-        <a href="./history.handlebars">View History</a>
-        <a href="./layouts/login.handlebars"> Logout</a>
+      <div class="navbar-brand">
+        <p class="navbar-item progress-header">Progress</p>
+          
+        <div class="navbar-item navbar-end buttons">
+            <a class="button is-link" >Dashboard</a>
+            <a class="button is-link" >Log a Workout</a>
+            <a class="button is-link">View History</a>
+            <a class="button is-link"> Logout</a>
+        </div>
+      </div>
     </nav>
- </header>
- <div>
-    {{!-- check js syntax, correct name? --}}
-    <h1>Keep up the good work, {{firstName}}!</h1>
- </div>
+ </header> 
 
- {{!-- not sure how the charts will be display --}}
- <div>
-    {{!-- line chart: date v. workout length --}}
- </div>
+   <div>
+      <p class="progress-text-1">Keep up the good work, {{firstName}}!</p>
+   
+      <div class="data-charts">
+         <div>
+            <p class="progress-text-2">Look at your workout consistency</p>
+            <div class="charts">
+            {{dateVSlength}}
+            </div>
+         </div>
+         
+         <div>
+            <p class="progress-text-2">Look at your mood</p>
+            <div class="charts">
+            {{moodsPercentage}}
+            </div>
+         </div>
 
- <div>
-    {{!-- pie graph: moods% per month --}}
- </div>
 
-  {{!-- js links here --}}
+      </div>
+   </div>
+  <script src="js/data-graph.js"></script>
+</body>

@@ -12,21 +12,18 @@
 
 
 </head>
-
 <body class="dashboard-page">
  
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container" >
-        <div class="navbar-brand">
-          <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p> {{!-- does not display firstName --}}
-          <div class="navbar-item navbar-end">
-            <a href="/Main/public/js/logout.js" class="button is-link"> Logout</a> {{! not sure if this would work}}
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
+  <header>
+     <nav>
+         <div class="navbar-brand">
+           <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
+           <div class="navbar-item navbar-end">
+             <a class="button is-link" id="logout"> Logout</a>
+           </div>
+         </div>
+     </nav>
+   </header>
   
   
   <div class="dashboard-btn">
@@ -43,7 +40,8 @@
     <a href="/history" class ="history-btn"><span class="btn-text">View History</span></a>
   </div>
 </div>
-
-<script src="js/dashboard.js"></script>
-
-</body>
+ 
+ <script src="js/dashboard.js"></script>
+ <script src="js/logout.js"></script>
+ 
+ </body>
