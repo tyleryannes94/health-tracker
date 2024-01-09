@@ -41,4 +41,18 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
+// sandbox routing for dashboard.js file to redirect to workout page etc
+// Route for user profile data
+router.get('/tracker-input', withAuth, async (req, res) => {
+    try {
+        res.render('tracker-input', {
+            logged_in: true,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+        console.log("failed to load tracker page")
+    }
+    
+});
+
 module.exports = router;

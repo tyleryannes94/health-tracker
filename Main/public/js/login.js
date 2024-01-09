@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
         if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/profile'); 
+        document.location.replace('/dashboard'); // for some reason this was still /profile instead of /dashboard
         } else {
         alert(response.statusText);
         }
