@@ -13,8 +13,8 @@
 
 </head>
 <body class="dashboard-page">
-
-   <header>
+ 
+  <header>
      <nav>
          <div class="navbar-brand">
            <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
@@ -24,29 +24,24 @@
          </div>
      </nav>
    </header>
-   
-   
-   <div class="dashboard-btn">
-   <div class="workout-input">
-     <button type = "submit" class ="workout-input-btn">
-       <span class="btn-text">Log a Workout</span>
-     </button>
-   </div>
- 
-   <div class="progress-graphs">
-     <button type = "submit" class ="progress-btn">
-       <span class="btn-text">View Progress</span>
-     </button>
-   </div>
- 
-   <div class="history">
-     <button type = "submit" class ="history-btn">
-       <span class="btn-text">View History</span></button>
-   </div>
- </div>
+  
+  
+  <div class="dashboard-btn">
+  <div class="workout-input">
+      <a href="/tracker-input" class="workout-input-btn"><span class="btn-text">Log a Workout</span></a>
+    {{!-- TODO: tweak anchor tag for styling purposes. this will be the template to use for redirecting to other pages as well --}}
+  </div>
+
+  <div class="progress-graphs">
+    <a href="/data-graph" class="progress-btn"><span class="btn-text">View Progress</span></a>
+  </div>
+
+  <div class="history">
+    <a href="/history" class ="history-btn"><span class="btn-text">View History</span></a>
+  </div>
+</div>
  
  <script src="js/dashboard.js"></script>
  <script src="js/logout.js"></script>
  
  </body>
-

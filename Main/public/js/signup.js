@@ -23,6 +23,7 @@ console.log(password)
       });
 
       if (response.ok) {
+        // if successful, redirect browser to profile page
           document.location.replace('/dashboard');
       } else {      
           console.log(await response.json());
