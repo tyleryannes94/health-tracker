@@ -11,7 +11,7 @@ const signupFormHandler = async (event) => {
   
     if (firstName && lastName && email && password) {
         // send POST request to API endpoint
-      const response = await fetch('/api/user/signup', {
+      const response = await fetch('/signup', {
         method: 'POST',
         body: JSON.stringify({ 
             "first_name": firstName, 
@@ -25,7 +25,7 @@ const signupFormHandler = async (event) => {
   
       if (response.ok) {
         // if successful, redirect browser to profile page
-        document.location.replace('/api/dashboard'); // TODO: change '/profile' to '/profile.js' ?
+        document.location.replace('/dashboard'); // TODO: change '/profile' to '/profile.js' ?
       } else {      
         console.log(await response.json());
         alert(response.statusText);
