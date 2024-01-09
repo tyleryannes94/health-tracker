@@ -231,6 +231,7 @@ body.dashboard-page {
     font-size: 30px;
     margin-bottom: 10px;
 }
+
 .charts {
     display: flex;
     justify-content: center;
@@ -252,3 +253,55 @@ body.dashboard-page {
 }
 
 
+/* start styling for history.handlebars */
+.history-page {
+    background-color: rgba(223, 250, 252, 0.945);
+    flex: 1;
+}
+
+.history-header {
+    color: black;
+    font-size: 60px;
+    font-family: 'Bebas Neue', serif;
+}
+
+.history-text-1 {
+    color: black;
+    font-size: 50px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    font-family: 'Bebas Neue', serif;
+}
+
+.history-text-2 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;   
+}
+
+.table-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(40, 149, 238);
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
