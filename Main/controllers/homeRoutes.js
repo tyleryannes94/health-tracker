@@ -30,16 +30,35 @@ router.get('/signup', (req, res) => {
 });
 
 // Route to render the user dashboard - protected by withAuth
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', /*withAuth,*/ async (req, res) => {
+    console.log("Dashboard route accessed");
     try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: ['first_name', 'last_name', 'email', 'health_goal', 'starting_weight']
+        });
+
+        if (!userData) {
+            res.status(404).json({ message: 'User not found' });
+            return;
+        }
+
+        // Convert Sequelize object to plain object
+        const user = userData.get({ plain: true });
+
+        // Log the user object to the console
+        console.log("User data to be passed to the template:", user);
+
         res.render('dashboard', {
-            logged_in: true,
+            firstName: user.first_name, // Assuming your database field is 'first_name'
+            // Other data can be passed here as well
         });
     } catch (err) {
         res.status(500).json(err);
-        console.log ("Failed to render the dashboard page.")
     }
 });
+
+
+
 
 // sandbox routing for dashboard.js file to redirect to workout page etc
 // Route to render tracker-input page
