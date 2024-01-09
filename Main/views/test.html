@@ -15,43 +15,41 @@
 
 
 
-<body class="progress-page">
-  <header>
-    <nav>
-      <div class="navbar-brand">
-        <p class="navbar-item progress-header">Progress</p>
-          
-        <div class="navbar-item navbar-end buttons">
-            <a class="button is-link" >Dashboard</a>
-            <a class="button is-link" >Log a Workout</a>
-            <a class="button is-link">View History</a>
-            <a class="button is-link"> Logout</a>
-        </div>
-      </div>
-    </nav>
- </header> 
-
-   <div>
-      <p class="progress-text-1">Keep up the good work, {{firstName}}!</p>
+<body class="dashboard-page">
+ 
+   <header>
+     <nav>
+         <div class="navbar-brand">
+           <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
+           <div class="navbar-item navbar-end">
+             <a class="button is-link" id="logout"> Logout</a>
+           </div>
+         </div>
+     </nav>
+   </header>
    
-      <div class="data-charts">
-         <div>
-            <p class="progress-text-2">Look at your workout consistency</p>
-            <div class="charts">
-            {{dateVSlength}}
-            </div>
-         </div>
-         
-         <div>
-            <p class="progress-text-2">Look at your mood</p>
-            <div class="charts">
-            {{moodsPercentage}}
-            </div>
-         </div>
-
-
-      </div>
+   
+   <div class="dashboard-btn">
+   <div class="workout-input">
+     <button type = "submit" class ="workout-input-btn">
+       <span class="btn-text">Log a Workout</span>
+     </button>
    </div>
-  <script scr="js/data-graph.js"></script>
-</body>
+ 
+   <div class="progress-graphs">
+     <button type = "submit" class ="progress-btn">
+       <span class="btn-text">View Progress</span>
+     </button>
+   </div>
+ 
+   <div class="history">
+     <button type = "submit" class ="history-btn">
+       <span class="btn-text">View History</span></button>
+   </div>
+ </div>
+ 
+ <script scr="js/dashboard.js"></script>
+ <script src="js/logout.js"></script>
+ 
+ </body>
 </html>
