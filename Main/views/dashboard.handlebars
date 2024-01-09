@@ -1,54 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resolute</title>
-    <link rel="stylesheet" href="css/style.css">
-    {{!-- <link rel="stylesheet" href="css/jass.css"> --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="YOUR_CORRECT_INTEGRITY_VALUE" crossorigin="anonymous">
-
-
-</head>
-
 <body class="dashboard-page">
  
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container" >
-        <div class="navbar-brand">
-          <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
-          <div class="navbar-item navbar-end">
-            <a class="button is-link" id="logout"> Logout</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-  
-  
-  <div class="dashboard-btn">
-  <div class="workout-input">
-    <button type = "submit" class ="workout-input-btn">
-      <span class="btn-text">Log a Workout</span>
-    </button>
-  </div>
-
-  <div class="progress-graphs">
-    <button type = "submit" class ="progress-btn">
-      <span class="btn-text">View Progress</span>
-    </button>
-  </div>
-
-  <div class="history">
-    <button type = "submit" class ="history-btn">
-      <span class="btn-text">View History</span></button>
-  </div>
-</div>
-
-<script scr="js/dashboard.js"></script>
-<script src="js/logout.js"></script>
-
-</body>
+   <header>
+     <nav>
+         <div class="navbar-brand">
+           <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
+           <div class="navbar-item navbar-end">
+             <a class="button is-link" id="logout"> Logout</a>
+           </div>
+         </div>
+     </nav>
+   </header>
+   
+   
+   <div class="dashboard-btn">
+   <div class="workout-input">
+     <button type = "submit" class ="workout-input-btn">
+       <span class="btn-text">Log a Workout</span>
+     </button>
+   </div>
+ 
+   <div class="progress-graphs">
+     <button type = "submit" class ="progress-btn">
+       <span class="btn-text">View Progress</span>
+     </button>
+   </div>
+ 
+   <div class="history">
+     <button type = "submit" class ="history-btn">
+       <span class="btn-text">View History</span></button>
+   </div>
+ </div>
+ 
+ <script scr="js/dashboard.js"></script>
+ <script src="js/logout.js"></script>
+ 
+ </body>
