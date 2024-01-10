@@ -3,7 +3,7 @@ const sequelize = require('../config/connection.js');
 
 // Import models
 const User = require('./User');
-const Mood = require('./Mood');
+// const Mood = require('./Mood');
 const Workout = require('./Workout');
 
 // User-Workout association
@@ -17,20 +17,20 @@ Workout.belongsTo(User, {
 });
 
 // User-Mood association
-User.hasMany(Mood, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE' 
-});
+// User.hasMany(Mood, {
+//     foreignKey: 'user_id',
+//     onDelete: 'CASCADE' 
+// });
 
-Mood.belongsTo(User, {
-    foreignKey: 'user_id'
-});
+// Mood.belongsTo(User, {
+//     foreignKey: 'user_id'
+// });
 
 // Export models and sequelize connection
 module.exports = {
     sequelize,
     Sequelize,
     User,
-    Mood,
+    // Mood,
     Workout
 };
