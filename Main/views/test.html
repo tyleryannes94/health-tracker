@@ -15,42 +15,104 @@
 
 
 
-<body class="dashboard-page">
+<body class="tracker-input-page">
  
-  <header>
-     <nav>
-         <div class="navbar-brand">
-           <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
-           <div class="navbar-item navbar-end">
-             <a class="button is-link" id="logout"> Logout</a>
-           </div>
-         </div>
-     </nav>
-   </header>
-  
-  
-  <div class="dashboard-btn">
-    <div class="workout-input">
-        <a href="/tracker-input" class="image workout-input-btn">
-          <span class="btn-text">Log a Workout</span></a>
+
+    <nav >
+     
+        <div class="navbar-brand">
+          <p class="navbar-item tracker-header">Workout Log</p>
+          <div class="navbar-item navbar-end">
+            <div class="buttons">
+              <a href="./dashboard.handlebars" class="button is-link">Dashboard</a>
+              <a class="button is-link" id="logout">Logout</a>
+            </div>
+          </div>
+        </div>
       
-    </div>
-
-    <div class="progress-graphs">
-      <a href="/data-graph" class=" image progress-btn">
-        <span class="btn-text">View Progress</span></a>
-    </div>
-
-    <div class="history">
-      <a href="/history" class ="image history-btn">
-        <span class="btn-text">View History</span></a>
-    </div>
-</div>
+    </nav>
+  
  
- <script src="../public/js/dashboard.js"></script>
- <script src="../public/js/logout.js"></script>
- 
-</body>
+  <div class="tracker-form column is-one-third">
+    <p class="tracker-text">What did you do today?</p>
+
+    <form> 
+      <div class="field">
+        <label class="label" for="workout-type">Workout Type:</label>
+        <div class="control">
+          <div class="select">
+            <select id="workout-type" name="workout-type" required>
+              <option value="blank">Select a workout type</option>
+              <option value="cardio">Cardio</option>
+              <option value="strength">Strength Training</option>
+              <option value="flexibility">Flexibility</option>
+              <option value="HIIT">HIIT</option>
+              <option value="outdoor">Outdoor Activity</option>
+              <option value="recovery">Recovery</option>
+              <option value="mind">Mind Wellness</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="workout-time">Workout Time:</label>
+        <div class="control">
+            <input class="input" type="number" id="workout-time" placeholder="Minutes" required />
+        </div>
+      </div>
+
+      <div class="field ">
+        <label class="label" for="mood">Mood:</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="mood" value="happy" /> 😄 Happy
+          </label>
+          &nbsp;&nbsp;&nbsp;
+          <label>
+            <input type="radio" name="mood" value="neutral" /> 😐 Neutral
+          </label>
+          &nbsp;&nbsp;&nbsp;
+          <label>
+            <input type="radio" name="mood" value="sad" /> 😞 Sad
+          </label>
+          &nbsp;&nbsp;&nbsp;
+          <label>
+            <input type="radio" name="mood" value="sad" /> 🤷‍♂️ Don't Know
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="weight">What's your current wight? (Optional)</label>
+        <div class=" field has-addons has-addons-left">
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>lbs</option>
+              <option>kg</option>
+            </select>
+          </span>
+        </p>
+        <p class="control">
+          <input class="input" type="text" id="current-weight" placeholder="Weight">
+        </p>
+      </div>
+      </div>
+
+      <div class="field is-grouped is-grouped-centered submit-cancel-btns">
+        <div class="control">
+          <button class="button is-link">Log Workout</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Clear</button> 
+          <!-- use public/js to clear form -->
+          
+          
+        </div>
+      </div>
+    </form>
+  </div>
 
 
 </html>
