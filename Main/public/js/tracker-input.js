@@ -1,8 +1,15 @@
 const workoutFormHandler = async (event) => {
     event.preventDefault();
-
+    // console.log(workoutData)
     const workoutType = document.querySelector('#workout-type').value;
     const workoutTime = document.querySelector('#workout-time').value;
+    const moodMapping = {
+        'happy': 1,
+        'neutral': 2,
+        'sad': 3,
+        'dont-know': 4 // Ensure this value matches the value in your HTML
+      };
+      
     const mood = document.querySelector('input[name="mood"]:checked').value;
     let currentWeight = document.querySelector('#current-weight').value;
 
