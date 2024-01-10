@@ -1,22 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // need to update to fetch workout history data from api/table
-        const workoutHistory = [
-        { date: '01/01/22', type: 'Cardio', length: '30 minutes', mood: '😄' },
-        { date: '02/01/22', type: 'Mind Wellness', length: '45 minutes', mood: '😄' },
-       
-    ];
-
     const tableBody = document.querySelector('#history-table tbody');
 
-    // populate the table with data
-    workoutHistory.forEach(entry => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${entry.date}</td>
-            <td>${entry.type}</td>
-            <td>${entry.length}</td>
-            <td>${entry.mood}</td>
-        `;
-        tableBody.appendChild(row);
+    // Function to fetch workout history data
+    const fetchWorkoutHistory = async () => {
+        try {
+            // Retrieve the user ID from local storage
+            const userId = localStorage.getItem('userId');
+
+            if (!userId) {
+                throw new Error('User ID not found');
+            }
+
+            const response = await fetch(`/api/workout/users/${userId}`); // if users/ doesn't work, try user/
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch workout history');
+            }
+
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+            throw error; // Propagate the error to be handled in the calling function
+        }
+    };
+
+    // Function to populate the table with data
+    const populateTable = (workoutHistory) => {
+        if (workoutHistory.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="5">No workout history found.</td></tr>';
+            return;
+        }
+
+        workoutHistory.forEach(entry => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${new Date(entry.logged_date).toLocaleDateString()}</td>
+                <td>${entry.workout_type}</td>
+                <td>${entry.workout_length} minutes</td>
+                <td>${entry.mood}</td>
+                <td>${entry.new_weight ? entry.new_weight + ' lbs/kg' : 'N/A'}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    };
+
+    // Fetch and display workout history
+    fetchWorkoutHistory().then(workoutHistory => {
+        populateTable(workoutHistory);
+    }).catch(error => {
+        console.error('Error fetching workout history:', error);
+        tableBody.innerHTML = '<tr><td colspan="5">Error loading workout history.</td></tr>';
     });
 });
