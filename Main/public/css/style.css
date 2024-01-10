@@ -15,6 +15,7 @@ body {
 }
 
 
+
 /* start styling for login.handlebars */
 #login-page-body {
     background-image: url(../images/shutterstock_1134937067.jpg);
@@ -55,6 +56,8 @@ body {
 }
 
 
+
+
 /* start styling for signup.handlebars */
 .signup-form-body {
     background: linear-gradient(rgb(40, 149, 238),rgb(3, 202, 202),rgb(140, 253, 248))
@@ -79,6 +82,8 @@ body {
     margin-top: 30px;
 }
 
+
+
 /* start styling for dashboard.handlebars */
 .dashboard-header {
     color: black;
@@ -95,8 +100,11 @@ body.dashboard-page {
 }
 
 .btn-text {
-    color: rgba(223, 250, 252, 0.945); 
-    font-size: 60px;
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    color: rgba(252, 230, 223, 0.945); 
+    font-size: 70px;
     font-family: 'Bebas Neue', serif;
     letter-spacing: 2px;
     -webkit-text-stroke: 1px black;
@@ -129,13 +137,19 @@ body.dashboard-page {
 .history-btn::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
     opacity: 0.6;
     pointer-events: none;
+}
+
+.workout-input-btn .btn-text,
+.progress-btn .btn-text,
+.history-btn .btn-text {
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
 }
 
 .workout-input-btn::before {
@@ -149,6 +163,8 @@ body.dashboard-page {
 .history-btn::before {
     background-image: url(../images/history.png);
 }
+
+
 
 /* start styling for tracker-input.handlebars */
 .tracker-input-page {
@@ -176,6 +192,8 @@ body.dashboard-page {
     height: 100vh;
     margin: 5px auto; 
 }
+
+
 
 /* start styling for data-graph.handlebars */
 .progress-page {
