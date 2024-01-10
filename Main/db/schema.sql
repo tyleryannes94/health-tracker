@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS resolution_tracking;
 
 CREATE DATABASE resolution_tracking;
 
-USE resolution_tracking;
+-- USE resolution_tracking;
 
 -- CREATE TABLE user (
 --     id INT AUTO_INCREMENT PRIMARY KEY,
