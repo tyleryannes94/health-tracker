@@ -15,50 +15,39 @@
 
 
 
-<body class="history-page">
+<body class="dashboard-page">
+ 
   <header>
-    <nav>
-      <div class="navbar-brand">
-        <p class="navbar-item history-header">History</p>
-          
-        <div class="navbar-item navbar-end buttons">
-            <a class="button is-link" >Dashboard</a>
-            <a class="button is-link" >Log a Workout</a>
-            <a class="button is-link">View Progress</a>
-            <a class="button is-link"> Logout</a>
-        </div>
-      </div>
-    </nav>
- </header> 
+     <nav>
+         <div class="navbar-brand">
+           <p class="navbar-item dashboard-header">Welcome, {{firstName}}</p>
+           <div class="navbar-item navbar-end">
+             <a class="button is-link" id="logout"> Logout</a>
+           </div>
+         </div>
+     </nav>
+   </header>
   
- <div>
-    <p class="history-text-1">Keep up the good work, {{firstName}}!</p>
-
-    <p class="history-text-2">View your workout history</p>
-    <div class="table-view">
-          <table class="table" id="history-table">
-            <!-- table header -->
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Workout Type</th>
-                <th>Length</th>
-                <th>Mood</th>
-              </tr>
-            </thead>
-            <!-- table data -->
-            <tbody>
-
-              <!-- table content will populate here from history.js -->
-              
-            </tbody> 
-          </table>
-      </div>
+  
+  <div class="dashboard-btn">
+  <div class="workout-input">
+      <a href="/tracker-input" class="image workout-input-btn"><span class="btn-text">Log a Workout</span></a>
+    
   </div>
 
-  <script src="../public/js/history.js"></script>
+  <div class="progress-graphs">
+    <a href="/data-graph" class=" image progress-btn"><span class="btn-text">View Progress</span></a>
+  </div>
 
-</body>
+  <div class="history">
+    <a href="/history" class ="image history-btn"><span class="btn-text">View History</span></a>
+  </div>
+</div>
+ 
+ <script src="../public/js/dashboard.js"></script>
+ <script src="../public/js/logout.js"></script>
+ 
+ </body>
 
 
 </html>
