@@ -11,7 +11,8 @@ router.post('/signup', async (req, res) => {
             req.session.user_id = newUser.id;
             req.session.logged_in = true;
 
-            res.status(200).json(newUser);
+            // Send back only the user ID
+            res.status(200).json({ user: { id: newUser.id } }); 
         });
     } catch (err) {
         res.status(400).json(err);
