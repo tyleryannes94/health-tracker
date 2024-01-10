@@ -20,7 +20,7 @@ Workout.init(
             allowNull: false
         },
         mood: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         new_weight: {
