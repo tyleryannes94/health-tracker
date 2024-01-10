@@ -77,27 +77,49 @@ router.get('/tracker-input', withAuth, async (req, res) => {
 // route to render data-graph page
 router.get('/data-graph', withAuth, async (req, res) => {
     try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: ['first_name']
+        });
+
+        if (!userData) {
+            res.status(404).json({ message: 'User not found' });
+            return;
+        }
+
+        const user = userData.get({ plain: true });
+
         res.render('data-graph', {
             logged_in: true,
+            firstName: user.first_name
         });
     } catch (err) {
         res.status(500).json(err);
         console.log("failed to load data-graph page")
     }
-    
 });
 
 // route to render history page
 router.get('/history', withAuth, async (req, res) => {
     try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: ['first_name']
+        });
+
+        if (!userData) {
+            res.status(404).json({ message: 'User not found' });
+            return;
+        }
+
+        const user = userData.get({ plain: true });
+
         res.render('history', {
             logged_in: true,
+            firstName: user.first_name
         });
     } catch (err) {
         res.status(500).json(err);
         console.log("failed to load history page")
     }
-    
 });
 
 
