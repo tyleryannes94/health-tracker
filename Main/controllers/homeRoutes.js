@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Mood, Workout } = require('../models');
 const withAuth = require('../utils/auth');
 
+
 // Redirect root route to dashboard
 router.get('/', (req, res) => {
     if (req.session.logged_in) {
@@ -20,14 +21,6 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-// Route to render the registration page
-router.get('/signup', (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/dashboard');
-        return;
-    }
-    res.render('signup'); 
-});
 
 // Route to render the user dashboard - protected by withAuth
 router.get('/dashboard', /*withAuth,*/ async (req, res) => {
