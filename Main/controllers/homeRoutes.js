@@ -21,6 +21,15 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+//Route to signup page
+router.get ('/signup', (req,res) =>{
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+    }
+    res.render('signup');
+})
+
 
 // Route to render the user dashboard - protected by withAuth
 router.get('/dashboard', /*withAuth,*/ async (req, res) => {
@@ -50,10 +59,6 @@ router.get('/dashboard', /*withAuth,*/ async (req, res) => {
     }
 });
 
-
-
-
-// sandbox routing for dashboard.js file to redirect to workout page etc
 // Route to render tracker-input page
 router.get('/tracker-input', withAuth, async (req, res) => {
     try {
