@@ -34,6 +34,8 @@
       <div class="data-charts">
          <div>
             <p class="progress-text-2">Look at your workout consistency</p>
+            <canvas id="workoutLineChart"></canvas>
+
             <div class="charts">
             {{dateVSlength}}
             </div>
@@ -41,6 +43,8 @@
          
          <div>
             <p class="progress-text-2">Look at your mood</p>
+            <canvas id="workoutTypeChart"></canvas>
+            <canvas id="moodChart"></canvas>
             <div class="charts">
             {{moodsPercentage}}
             </div>
@@ -51,4 +55,6 @@
    </div>
   <script src="js/data-graph.js"></script>
   <script src="js/logout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
