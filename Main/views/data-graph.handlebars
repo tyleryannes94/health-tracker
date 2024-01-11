@@ -38,7 +38,41 @@
             {{dateVSlength}}
             </div> --}}
          </div>
-         <div></div>
+
+         <div> {{! added chart tag to implement graph }}
+            <canvas id="myChart"></canvas>
+         </div>
+         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+         <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+               type: 'line',
+               // TODO: FIGURE OUT HOW TO ADD USER DATA
+               data: {
+                  datasets: [{
+                     data: {
+                        // dummy data
+                        January: 10, 
+                        February: 20
+                     }
+                  }]
+               },
+               options: { 
+                  scales: {
+                  y: {
+                     beginAtZero: true
+                  }
+                  }
+               }
+            });
+
+         </script>
+         
+        
+
+
          <div>
             <p class="progress-text-2">Look at your mood</p>
             <div class="charts">
