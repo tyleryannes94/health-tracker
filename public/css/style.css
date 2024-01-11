@@ -14,17 +14,33 @@ body {
     justify-content: center;
 }
 
+.navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
+.navbar-item, .buttons {
+    margin: 5px 0; /* Adjust spacing */
+}
 
-/* start styling for login.handlebars */
-#login-page-body {
+/* Apply background style to specific pages */
+#login-page-body,
+.signup-form-body,
+.dashboard-page,
+.tracker-input-page,
+.progress-page,
+.history-page {
     background-image: url(../images/wp2985403-watercolor-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+    min-height: 100vh; /* Ensure minimum height is the viewport height */
 }
 
+
+/* start styling for login.handlebars */
 #login-header {
     font-family: 'Bebas Neue', serif;
     font-size: 80px;
@@ -34,7 +50,6 @@ body {
     align-items: center;
 }
 
-
 .login-form {
     display: flex;
     flex-direction: column;
@@ -43,7 +58,6 @@ body {
     height: 100vh;
     margin: 5px auto; 
 }
-
 
 .login-btn {
     margin-top: 10px;
@@ -56,35 +70,7 @@ body {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    #login-header {
-        font-size: 40px; /* Adjust font size for smaller screens */
-        
-    }
-
-    .login-form {
-        width: 80%; /* Make the form width 80% of the viewport width */
-    }
-
-    .login-text {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
-
-    .login-btn {
-        width: 100%; /* Make the button full width on smaller screens */
-    }
-}
-
-
-
 /* start styling for signup.handlebars */
-.signup-form-body {
-    background-image: url(../images/wp2985403-watercolor-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .signup-form {
     display: flex;
     flex-direction: column;
@@ -104,14 +90,14 @@ body {
     margin-top: 30px;
 }
 
-
-
 /* start styling for dashboard.handlebars */
 .dashboard-page {
     background-image: url(../images/wp2985403-watercolor-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* min-height: 100vh; */
+    max-height: 844px;
 }
 
 .dashboard-header {
@@ -152,7 +138,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px
+    margin: 15px;
 }
 
 .workout-input-btn::before,
@@ -163,7 +149,6 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
-    
     pointer-events: none;
 }
 
@@ -188,15 +173,7 @@ body {
 }
 
 
-
 /* start styling for tracker-input.handlebars */
-.tracker-input-page {
-    background-image: url(../images/wp2985403-watercolor-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .tracker-header {
     color: black;
     font-size: 60px;
@@ -218,23 +195,6 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 5px auto; 
-}
-
-@media screen and (max-width: 768px) {
-    #tracker-header {
-        font-size: 40px; /* Adjust font size for smaller screens */
-        
-    }
-
-    .tracker-form {
-        width: 80%; /* Make the form width 80% of the viewport width */
-    }
-
-    
-
-    .login-btn {
-        width: 100%; /* Make the button full width on smaller screens */
-    }
 }
 
 
@@ -271,8 +231,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; 
-    /* change height if necessary */
+    height: 100px;
 }
 
 .charts canvas {
@@ -288,14 +247,8 @@ body {
 }
 
 
-/* start styling for history.handlebars */
-.history-page {
-    background-image: url(../images/wp2985403-watercolor-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
 
+/* start styling for history.handlebars */
 .history-header {
     color: black;
     font-size: 60px;
@@ -314,7 +267,6 @@ body {
     color: black;
     font-size: 30px;
     margin-bottom: 10px;
-    text-align: center;   
 }
 
 .table-view {
@@ -341,4 +293,69 @@ th {
 
 tr:hover {
     background-color: #f5f5f5;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    #login-header, .tracker-header, .progress-header, .history-header {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .login-form, .signup-form, .tracker-form {
+        width: 90%; /* Make the form width 90% of the viewport width */
+    }
+
+    .dashboard-btn, .data-charts, .table-view {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .btn-text {
+        font-size: 30px; /* Smaller text on buttons */
+    }
+
+    .progress-text-1, .history-text-1 {
+        font-size: 30px; /* Adjusting main header text size */
+    }
+
+    .progress-text-2, .history-text-2 {
+        font-size: 20px; /* Adjusting sub-header text size */
+    }
+
+    .chart-container, .workoutLineChart {
+        width: 100%; /* Full width charts */
+        max-width: 390px; /* Maximum width set to 390px */
+        height: auto; /* Height adjusts automatically */
+        margin: 0 auto; /* Center the chart if it's narrower than the screen */
+    }
+
+    .pie-chart-container {
+        width: 90%; /* Adjust width to fit screen */
+        height: 180px; /* Adjust height as needed */
+        margin-bottom: 10px; /* Reduce space between charts */
+    }
+
+    .pie-charts {
+        flex-direction: column;
+        align-items: center; /* Align charts in the center */
+        height:auto;
+    }
+
+    table {
+        width: 100%; /* Full width table */
+    }
+
+    th, td {
+        padding: 8px; /* Smaller padding for table cells */
+    }
+    .navbar-brand {
+        max-width: 390px;
+        margin: 0 auto; /* Center the navbar */
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+    }
+
+    .navbar-item, .buttons {
+        flex: 1 0 100%; /* Force items to take full width of their container */
+        justify-content: center; /* Center items within their container */
+        text-align: center; /* Center text */
+    }
 }

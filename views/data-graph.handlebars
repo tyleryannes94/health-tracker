@@ -5,70 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resolute</title>
     <link rel="stylesheet" href="css/style.css">
-    {{!-- <link rel="stylesheet" href="css/jass.css"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="YOUR_CORRECT_INTEGRITY_VALUE" crossorigin="anonymous">
-      <style>
-            .chart-container {
-                  width: 800px;
-                  height: 100%; 
-            }
-            .pie-charts {
-                  display: flex;
-                  justify-content: space-around;
-            }
-            .pie-chart-container {
-                  width: 50%;
-                  height: 500px; 
-            }
-         </style>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous">
 </head>
 <body class="progress-page">
-  <header>
-    <nav>
-      <div class="navbar-brand">
-        <p class="navbar-item progress-header has-text-black">Progress</p>
-          
-        <div class="navbar-item navbar-end buttons">
-            <a href="./dashboard" class="button is-small is-link" >Dashboard</a>
-            <a href="./tracker-input" class="button is-small is-link" >Log a Workout</a>
-            <a href="./history" class="button is-small is-link">View History</a>
-            <a class="button is-small is-link" id="logout"> Logout</a>
+    <header>
+        <nav>
+            <div class="navbar-brand">
+                <p class="navbar-item progress-header">Progress</p>
+                <div class="navbar-item navbar-end buttons">
+                    <a href="./dashboard" class="button is-small is-link">Dashboard</a>
+                    <a href="./tracker-input" class="button is-small is-link">Log a Workout</a>
+                    <a href="./history" class="button is-small is-link">View History</a>
+                    <a class="button is-small is-link" id="logout">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header> 
+
+    <div>
+        <p class="progress-text-1">Keep up the good work, {{firstName}}!</p>
+        <div class="data-charts">
+            <div>
+                <p class="progress-text-2">Look at your workout consistency</p>
+                <div class="chart-container">
+                    <canvas id="workoutLineChart"></canvas>
+                </div>
+            </div>
+            <div>
+                <p class="progress-text-2">Workout Type + Mood Logs</p>
+                <div class="pie-charts">
+                    <div class="pie-chart-container">
+                        <canvas id="workoutTypeChart"></canvas>
+                    </div>
+                    <div class="pie-chart-container">
+                        <canvas id="moodChart"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
- </header> 
+    </div>
 
-   <div>
-      <p class="progress-text-1">Keep up the good work, {{firstName}}!</p>
-   
-      <div class="data-charts">
-         <div>
-            <p class="progress-text-2">Look at your workout consistency</p>
-            <div class="chart-container">
-                  <canvas id="workoutLineChart"></canvas>
-               </div>
-            <div class="charts">
-            {{dateVSlength}}
-            </div>
-         </div>
-         
-         <div>
-            <p class="progress-text-2">Workout Type + Mood Logs</p> 
-            <div class="pie-charts">
-            <div class="pie-chart-container">
-                  <canvas id="workoutTypeChart"></canvas>
-            </div>
-            <div class="pie-chart-container">
-                  <canvas id="moodChart"></canvas>
-            </div>
-         </div>
-      </div>
-   </div>
-  <script src="js/data-graph.js"></script>
-  <script src="js/logout.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <script src="js/data-graph.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
+</html>
