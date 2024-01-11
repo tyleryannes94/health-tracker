@@ -13,6 +13,17 @@ Resolute is a comprehensive, user-friendly workout tracking application designed
 
 Access the live application deployed on Heroku here: [Health Tracker Live App](https://resolution-tracker-cc532db3cd97.herokuapp.com/)
 
+## Screenshots
+
+### Account Page
+![Account Page](public/images/account-page.png)
+
+### Dashboard Page
+![Dashboard Page](public/images/dashboard-page.png)
+
+### Tracker Page
+![Tracker Page](public/images/tracker-page.png)
+
 ## Installation
 
 To set up Resolute locally, follow these steps:
@@ -67,7 +78,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - [Sequelize](https://sequelize.org/)
 - [Bulma](https://bulma.io/)
 - [Font Awesome](https://fontawesome.com/)
-
-## Application Screenshots
-Images:
-<src="./public/images/account-page">
