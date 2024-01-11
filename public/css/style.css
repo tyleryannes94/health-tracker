@@ -79,7 +79,10 @@ body {
 
 /* start styling for signup.handlebars */
 .signup-form-body {
-    background: linear-gradient(rgb(40, 149, 238),rgb(3, 202, 202),rgb(140, 253, 248))
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .signup-form {
@@ -110,30 +113,31 @@ body {
     font-family: 'Bebas Neue', serif;
 }
 
-body.dashboard-page {
-    background-color: rgba(223, 250, 252, 0.945);
+.dashboard-page {
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.navbar {
-    background-color: rgba(223, 250, 252, 0.945) ;
-}
 
 .btn-text {
     position: absolute;
     z-index: 2;
     white-space: nowrap;
-    color: rgba(252, 230, 223, 0.945); 
-    font-size: 70px;
+    color: white; 
+    font-size: 60px;
     font-family: 'Bebas Neue', serif;
     letter-spacing: 2px;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px rgb(84, 84, 233);
 }
 
 .dashboard-btn {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .workout-input-btn,
@@ -141,14 +145,15 @@ body.dashboard-page {
 .history-btn {
     position: relative;
     overflow: hidden;
-    width: 450px;
-    height: 250px;
+    width: 800px;
+    height: 150px;
     cursor: pointer;
     border-radius: 10px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 15px
 }
 
 .workout-input-btn::before,
@@ -159,7 +164,7 @@ body.dashboard-page {
     width: 100%;
     height: 100%;
     background-size: cover;
-    opacity: 0.6;
+    
     pointer-events: none;
 }
 
@@ -172,22 +177,25 @@ body.dashboard-page {
 }
 
 .workout-input-btn::before {
-    background-image: url(../images/workout-input.png);
+    background-color: rgb(84, 84, 233);
 }
 
 .progress-btn::before {
-    background-image: url(../images/progress.png);
+    background-color: rgb(84, 84, 233);
 }
 
 .history-btn::before {
-    background-image: url(../images/history.png);
+    background-color: rgb(84, 84, 233);
 }
 
 
 
 /* start styling for tracker-input.handlebars */
 .tracker-input-page {
-    background-color: rgba(223, 250, 252, 0.945);
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .tracker-header {
@@ -198,8 +206,9 @@ body.dashboard-page {
 
 .tracker-text {
     color: black;
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 10px;
+    font-family: 'Bebas Neue', serif;
     
 }
 
@@ -212,12 +221,31 @@ body.dashboard-page {
     margin: 5px auto; 
 }
 
+@media screen and (max-width: 768px) {
+    #tracker-header {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        
+    }
+
+    .tracker-form {
+        width: 80%; /* Make the form width 80% of the viewport width */
+    }
+
+    
+
+    .login-btn {
+        width: 100%; /* Make the button full width on smaller screens */
+    }
+}
+
 
 
 /* start styling for data-graph.handlebars */
 .progress-page {
-    background-color: rgba(223, 250, 252, 0.945);
-    flex: 1;
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .progress-header {
@@ -263,8 +291,10 @@ body.dashboard-page {
 
 /* start styling for history.handlebars */
 .history-page {
-    background-color: rgba(223, 250, 252, 0.945);
-    flex: 1;
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .history-header {
