@@ -18,7 +18,7 @@ body {
 
 /* start styling for login.handlebars */
 #login-page-body {
-    background-image: url(../images/shutterstock_1134937067.jpg);
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,6 +31,7 @@ body {
     color: black;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -55,6 +56,24 @@ body {
     margin-top: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    #login-header {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        
+    }
+
+    .login-form {
+        width: 80%; /* Make the form width 80% of the viewport width */
+    }
+
+    .login-text {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .login-btn {
+        width: 100%; /* Make the button full width on smaller screens */
+    }
+}
 
 
 
