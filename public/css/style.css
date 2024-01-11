@@ -107,12 +107,6 @@ body {
 
 
 /* start styling for dashboard.handlebars */
-.dashboard-header {
-    color: black;
-    font-size: 60px;
-    font-family: 'Bebas Neue', serif;
-}
-
 .dashboard-page {
     background-image: url(../images/wp2985403-watercolor-background.jpg);
     background-size: cover;
@@ -120,6 +114,11 @@ body {
     background-attachment: fixed;
 }
 
+.dashboard-header {
+    color: black;
+    font-size: 60px;
+    font-family: 'Bebas Neue', serif;
+}
 
 .btn-text {
     position: absolute;
