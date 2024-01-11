@@ -61,3 +61,7 @@ Project Link: [https://github.com/yourusername/resolute](https://github.com/your
 - [Sequelize](https://sequelize.org/)
 - [Bulma](https://bulma.io/)
 - [Font Awesome](https://fontawesome.com/)
+
+## Credits
+Images: \
+https://wallpapercave.com/w/wp2985403#google_vignette
