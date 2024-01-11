@@ -9,7 +9,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="YOUR_CORRECT_INTEGRITY_VALUE" crossorigin="anonymous">
-
+      <style>
+            .chart-container {
+                  width: 800px;
+                  height: 100%; 
+            }
+            .pie-charts {
+                  display: flex;
+                  justify-content: space-around;
+            }
+            .pie-chart-container {
+                  width: 50%;
+                  height: 500px; 
+            }
+         </style>
 
 </head>
 <body class="progress-page">
@@ -34,23 +47,24 @@
       <div class="data-charts">
          <div>
             <p class="progress-text-2">Look at your workout consistency</p>
-            <canvas id="workoutLineChart"></canvas>
-
+            <div class="chart-container">
+                  <canvas id="workoutLineChart"></canvas>
+               </div>
             <div class="charts">
             {{dateVSlength}}
             </div>
          </div>
          
          <div>
-            <p class="progress-text-2">Look at your mood</p>
-            <canvas id="workoutTypeChart"></canvas>
-            <canvas id="moodChart"></canvas>
-            <div class="charts">
-            {{moodsPercentage}}
+            <p class="progress-text-2">Workout Type Distribution Mood Log</p> 
+            <div class="pie-charts">
+            <div class="pie-chart-container">
+                  <canvas id="workoutTypeChart"></canvas>
+            </div>
+            <div class="pie-chart-container">
+                  <canvas id="moodChart"></canvas>
             </div>
          </div>
-
-
       </div>
    </div>
   <script src="js/data-graph.js"></script>

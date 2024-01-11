@@ -52,7 +52,7 @@ function createLineChart(data) {
                 data: data.data,
                 backgroundColor: 'rgba(0, 123, 255, 0.5)',
                 borderColor: 'rgba(0, 123, 255, 1)',
-                borderWidth: 1
+                borderWidth: 2
             }]
         },
         options: {
@@ -89,7 +89,7 @@ function createPieChart(data, canvasId) {
                     'rgba(153, 102, 255, 1)',
                     'rgba(255, 159, 64, 1)'
                 ],
-                borderWidth: 1
+                borderWidth: 2
             }]
         }
     });
