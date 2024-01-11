@@ -90,33 +90,14 @@ body {
     margin-top: 30px;
 }
 
-
-/* start styling for signup.handlebars */
-.signup-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 5px auto; 
-}
-
-.signup-text {
-    color: black;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.submit-cancel-btns {
-    margin-top: 30px;
-}
-
 /* start styling for dashboard.handlebars */
 .dashboard-page {
     background-image: url(../images/wp2985403-watercolor-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* min-height: 100vh; */
+    max-height: 844px;
 }
 
 .dashboard-header {
@@ -157,7 +138,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px
+    margin: 15px;
 }
 
 .workout-input-btn::before,
@@ -168,7 +149,6 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
-    
     pointer-events: none;
 }
 
@@ -191,8 +171,6 @@ body {
 .history-btn::before {
     background-color: rgb(84, 84, 233);
 }
-
-
 
 
 /* start styling for tracker-input.handlebars */
