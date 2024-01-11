@@ -8,26 +8,26 @@
     {{!-- <link rel="stylesheet" href="css/jass.css"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="YOUR_CORRECT_INTEGRITY_VALUE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous">
 </head>
 <body class="tracker-input-page">
 
   <nav >
         <div class="navbar-brand">
-          <p class="navbar-item tracker-header">Workout Log</p>
+          <p class="navbar-item tracker-header has-text-black">Workout Log</p>
           <div class="navbar-item navbar-end">
             <div class="buttons">
-              <a href="./dashboard" class="button is-link">Dashboard</a>
-              <a href="./data-graph" class="button is-link">View Progress</a>
-              <a href="./history" class="button is-link">View History</a>
-              <a class="button is-link" id="logout">Logout</a>
+              <a href="./dashboard" class="button is-small is-link">Dashboard</a>
+              <a href="./data-graph" class="button is-small is-link">View Progress</a>
+              <a href="./history" class="button is-small is-link">View History</a>
+              <a class="button is-small is-link" id="logout">Logout</a>
             </div>
           </div>
         </div>
   </nav>
   
  
-  <div class="tracker-form column is-one-third">
+  <div class="tracker-form column is-half">
     <p class="tracker-text">What did you do today?</p>
 
     <form> 
@@ -36,14 +36,14 @@
         <div class="control">
           <div class="select">
             <select id="workout-type" name="workout-type" required>
-              <option value="blank">Select a workout type</option>
-              <option value="cardio">Cardio</option>
-              <option value="strength">Strength Training</option>
-              <option value="flexibility">Flexibility</option>
+              <option value="None">Select a workout type</option>
+              <option value="Cardio">Cardio</option>
+              <option value="Strength-training">Strength Training</option>
+              <option value="Flexibility">Flexibility</option>
               <option value="HIIT">HIIT</option>
-              <option value="outdoor">Outdoor Activity</option>
-              <option value="recovery">Recovery</option>
-              <option value="mind">Mind Wellness</option>
+              <option value="Outdoor-activity">Outdoor Activity</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Mind-wellness">Mind Wellness</option>
             </select>
           </div>
         </div>
