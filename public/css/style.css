@@ -192,7 +192,10 @@ body {
 
 /* start styling for tracker-input.handlebars */
 .tracker-input-page {
-    background-color: rgba(223, 250, 252, 0.945);
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .tracker-header {
@@ -203,8 +206,9 @@ body {
 
 .tracker-text {
     color: black;
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 10px;
+    font-family: 'Bebas Neue', serif;
     
 }
 
@@ -217,12 +221,31 @@ body {
     margin: 5px auto; 
 }
 
+@media screen and (max-width: 768px) {
+    #tracker-header {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        
+    }
+
+    .tracker-form {
+        width: 80%; /* Make the form width 80% of the viewport width */
+    }
+
+    
+
+    .login-btn {
+        width: 100%; /* Make the button full width on smaller screens */
+    }
+}
+
 
 
 /* start styling for data-graph.handlebars */
 .progress-page {
-    background-color: rgba(223, 250, 252, 0.945);
-    flex: 1;
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .progress-header {
@@ -268,8 +291,10 @@ body {
 
 /* start styling for history.handlebars */
 .history-page {
-    background-color: rgba(223, 250, 252, 0.945);
-    flex: 1;
+    background-image: url(../images/wp2985403-watercolor-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .history-header {
