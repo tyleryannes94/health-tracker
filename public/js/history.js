@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${entry.workout_type}</td>
                 <td>${entry.workout_length} minutes</td>
                 <td>${entry.mood}</td>
-                <td>${entry.new_weight ? entry.new_weight + ' lbs/kg' : 'N/A'}</td>
+                <td>${entry.new_weight ? entry.new_weight + ' lbs' : 'N/A'}</td>
             `;
             tableBody.appendChild(row);
         });
