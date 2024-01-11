@@ -9,13 +9,17 @@ Resolute is a comprehensive, user-friendly workout tracking application designed
 - **History Overview:** Access a complete history of past workouts to monitor consistency and progress.
 - **Mood Tracking:** Users can record their mood after each workout session, helping to understand the mental impact of their fitness journey.
 
+## Live Application
+
+Access the live application deployed on Heroku here: [Health Tracker Live App](https://resolution-tracker-cc532db3cd97.herokuapp.com/)
+
 ## Installation
 
 To set up Resolute locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/resolute.git
+    git clone https://github.com/tyleryannes94/resolute.git
     ```
 2. Navigate to the project directory:
     ```bash
@@ -44,15 +48,17 @@ Contributions to enhance Resolute are welcomed. Please follow these steps:
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Contributors
+
+- Tyler Yannes ([@tyleryannes94](https://github.com/tyleryannes94))
+- Angie Martinez ([@angiem07](https://github.com/angiem07))
+- Suzette Salinas ([@suzetsalinas](https://github.com/suzetsalinas))
+
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
-
-Your Name – [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/resolute](https://github.com/yourusername/resolute)
 
 ## Acknowledgements
 
@@ -62,6 +68,6 @@ Project Link: [https://github.com/yourusername/resolute](https://github.com/your
 - [Bulma](https://bulma.io/)
 - [Font Awesome](https://fontawesome.com/)
 
-## Credits
-Images: \
-https://wallpapercave.com/w/wp2985403#google_vignette
+## Application Screenshots
+Images:
+<src="./public/images/account-page">
