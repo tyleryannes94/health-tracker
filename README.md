@@ -62,7 +62,7 @@ Contributions to enhance Resolute are welcomed. Please follow these steps:
 ## Contributors
 
 - Tyler Yannes ([@tyleryannes94](https://github.com/tyleryannes94))
-- Angie Martinez ([@angiem07](https://github.com/angiem07))
+- Angie Montoya ([@angiem07](https://github.com/angiem07))
 - Suzette Salinas ([@suzetsalinas](https://github.com/suzetsalinas))
 
 
